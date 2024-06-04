@@ -1,5 +1,6 @@
 // This file stores all glyph image file paths and creates exportable arrays
 // that the main interactive calendar page can use to change images on demand
+// Unless otherwise specified, these lists are in order and must stay that way
 
 // ----------------- FILE PATHS ---------------------
 
@@ -173,7 +174,7 @@ const tzolkinGlyphPaths = [
 // Create an array to store the image object names for Haab
 const haabGlyphPaths = [
     glyphPop, glyphUo, glyphZip, glyphZotz, glyphTzec, glyphXul, glyphYaxkin,
-    glyphMol, glyphChen, glyphYax, glyphCeh, glyphZac, glyphMac, glyphKankin,
+    glyphMol, glyphChen, glyphYax, glyphZac, glyphCeh, glyphMac, glyphKankin,
     glyphMuan, glyphPax, glyphKayab, glyphCumku, glyphUayeb,
 ];
 
