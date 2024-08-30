@@ -18,7 +18,7 @@ import MayaLC from './Inputs/MayaLC';
 
 // Import all the functions we'll need
 import { getLCValues, getLCString, buildLCString } from '../../Functions/General';
-import { lcdToCRInfo, getTzolkPos, getHaabPos, getCRPos, yearCountData, getGodNum, getDeterminant } from '../../Functions/CalendarRound';
+import { lcdToCRInfo, getTzolkPos, getHaabPos, getCRPos, yearCountData, getGodNum, getDeterminant, getDirectionColorIndex } from '../../Functions/CalendarRound';
 import { getMoonAge, getLunarInfo, lcdTo3Planets, getMonthSize } from '../../Functions/Astronomy';
 import { getJDNFromLCD, getJDNDateString, jdnToDate, getLCDFromJDN, changeToJDN } from '../../Functions/JulianDayNumber';
 import { getLast819Station, getPlaceIn819Cycle, getNumStations } from '../../Functions/819DayStation';
@@ -96,6 +96,13 @@ export default function CalendarCore(props) {
 
             <Grid container justifyContent="center" >
                 
+                <Grid item md={12}>
+                    <Paper sx={ paperStyle }>
+                        <h1>Interactive Calendar Display</h1>
+                        <p>Use the controls on the left to select an input method and then fill in the desired values<br></br> 
+                        Hover over a glyph to read a description when viewing this site on a laptop/desktop</p>
+                    </Paper>
+                </Grid>
 
                 <Grid item style={{width: '330px'}}>
                     <Paper sx={ paperStyle }>
@@ -335,8 +342,8 @@ export default function CalendarCore(props) {
                                     TZOLKIN_NAMES[lcdToCRInfo(station).tzolkinName][names] + ' ' + 
                                     lcdToCRInfo(station).haabCoefficient + ' ' + 
                                     HAAB_NAMES[lcdToCRInfo(station).haabName][names]}<br></br>
-                                {DIRECTIONS[(lcdToCRInfo(station).tzolkinName % 4)] + ' ' + 
-                                    COLORS[(lcdToCRInfo(station).tzolkinName % 4)]}<br></br>
+                                {DIRECTIONS[getDirectionColorIndex(lcdToCRInfo(station).tzolkinName)] + ' ' + 
+                                    COLORS[getDirectionColorIndex(lcdToCRInfo(station).tzolkinName)]}<br></br>
                                 Distance: {getLCString(0,0,0,diffLC.tuns, diffLC.winals, diffLC.kins)}</p>
 
                                 <p>---</p>
@@ -375,14 +382,6 @@ export default function CalendarCore(props) {
                     </Paper>
                 </Grid>
                 
-                <Grid item md={12}>
-                    <Paper sx={ paperStyle }>
-                        <h1>Interactive Calendar Display</h1>
-                        <p>Use the controls on the left to select an input method and then fill in the desired values<br></br> 
-                        Hover over a glyph to read a description when viewing this site on a laptop/desktop</p>
-                    </Paper>
-                </Grid>
-
             </Grid>
 
         </div>
