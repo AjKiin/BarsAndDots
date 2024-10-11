@@ -80,7 +80,7 @@ export default function SerpentNumbers(props) {
             <Grid item xs={12}>
                 <Paper sx={ paperStyle }>
                     <h1>Serpent Numbers</h1>
-                    <p>Enter a serpent number (with piktuns) to convert into typical Long Count, Gregorian and Julian</p>
+                    <p>Enter a serpent number (distance number) to convert into typical Long Count, Gregorian and Julian</p>
                 </Paper>
             </Grid>
 
@@ -215,14 +215,11 @@ export default function SerpentNumbers(props) {
 
             <Grid item xs={12}>
                 <Paper sx={ paperStyle }>
-                    <p>Serpent Numbers are 6-place long counts. These would go to one larger position than 'Baktun' 
-                        which is 'Piktun' as shown in the following</p>
-                    <p>Piktun . Baktun . Katun . Tun . Uinal . Kin</p>
-                    <p>As an example of a 'Serpent Number,' take the recorded number 3.16.3.5.6.16</p>
-                    <p>This is equivalent to 10,967,536 in our decimal notation. </p>
-                    <p>In order to get the 0.0.0.0.0 equivalent of the Serpent number,
-                            the base date is subtracted from the expanded value of the Serpent Number. That difference is then 
-                            treated as any other long count.</p>
+                    <p>Serpent Numbers are 6-place long count distance numbers found in the Dresden codex</p>
+                    <p>The serpent base date (start of the timeline) is 15.16.16.14.11.4 9 K'an 12 K'ayab in our notation</p>
+                    <p>As an example of a 'Serpent Number,' take the recorded (distance) number 3.16.3.5.6.16</p>
+                    <p>This distance is equivalent to 10,967,536 days in our decimal notation. </p>
+                    <p>If we add 3.16.3.5.6.16 to the base date 15.16.16.14.11.4, we would get 0.0.0.0.0.0 4 Ahaw 8 Kumk'u</p>
                 </Paper>
             </Grid>
 
