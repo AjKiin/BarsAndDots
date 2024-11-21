@@ -286,13 +286,13 @@ export default function CalendarCore(props) {
                             <Grid item xs={2} md={2}><BootstrapTooltip title={toolTipMessages[24]}><img src={variousGlyphPaths[0]} alt="glyph" /></BootstrapTooltip></Grid>
 
                             <Grid item xs={4} md={4}>
-                                <p>Direction: {DIRECTIONS[(lcdToCRInfo(station).tzolkinName % 4)]} <br></br>
-                                Color: {COLORS[(lcdToCRInfo(station).tzolkinName % 4)]}</p>
+                                <p>Direction: {DIRECTIONS[getDirectionColorIndex(lcdToCRInfo(station).tzolkinName)]} <br></br>
+                                Color: {COLORS[getDirectionColorIndex(lcdToCRInfo(station).tzolkinName)]}</p>
                             </Grid>
                             <Grid item xs={2} md={2}></Grid>
-                            <Grid item xs={2} md={2}><BootstrapTooltip title={toolTipMessages[25]}><img src={directionGlyphPaths[ (lcdToCRInfo(station).tzolkinName % 4) ]} alt="glyph" /></BootstrapTooltip></Grid>
+                            <Grid item xs={2} md={2}><BootstrapTooltip title={toolTipMessages[25]}><img src={directionGlyphPaths[ getDirectionColorIndex(lcdToCRInfo(station).tzolkinName) ]} alt="glyph" /></BootstrapTooltip></Grid>
                             <Grid item xs={2} md={2}></Grid>
-                            <Grid item xs={2} md={2}><BootstrapTooltip title={toolTipMessages[26]}><img src={colorGlyphPaths[ (lcdToCRInfo(station).tzolkinName % 4) ]} alt="glyph" /></BootstrapTooltip></Grid>
+                            <Grid item xs={2} md={2}><BootstrapTooltip title={toolTipMessages[26]}><img src={colorGlyphPaths[ getDirectionColorIndex(lcdToCRInfo(station).tzolkinName) ]} alt="glyph" /></BootstrapTooltip></Grid>
 
                             <Grid item xs={4} md={4}>
                                 <p>K'awil god<br></br>Unknown glyph</p> 
