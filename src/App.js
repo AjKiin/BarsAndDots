@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Import the various pages
 import Navigation from         './Navigation/Navigation.js';
 
-/*
+/* DEPRECATED
 import DateDiffs from          './Pages/DateDiffs/DateDiffs.js';
 import FullDisplay from        './Pages/CalendarDisplay/FullDisplay.js';
 import DataLines from          './Pages/DataLines/DataLines.js';
