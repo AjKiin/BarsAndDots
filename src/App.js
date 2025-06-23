@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Import the various pages
 import Navigation from         './Navigation/Navigation.js';
 
+// Setup site traffic analytics from Vercel
+import { Analytics } from "@vercel/analytics/react"
+
 /* DEPRECATED
 import DateDiffs from          './Pages/DateDiffs/DateDiffs.js';
 import FullDisplay from        './Pages/CalendarDisplay/FullDisplay.js';
