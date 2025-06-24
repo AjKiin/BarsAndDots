@@ -33,6 +33,7 @@ export default function App(){
       <div className="App">
 
         <Navigation />
+        <Analytics />
 
 {/*}
         <Routes>
