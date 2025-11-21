@@ -18,6 +18,17 @@ const paperStyle = {
     paddingRight: '5px',
 }
 
+// Create the array that holds style properties for <Paper> for the Landing Page
+const paperStyleLP = {
+    backgroundColor: '#353535ff', 
+    textAlign: 'center', 
+    marginTop: '15px',
+    paddingTop: '10px',
+    paddingBottom: '5px',
+    paddingLeft: '5px',
+    paddingRight: '5px',
+}
+
 // Create the array that holds style properties for <Paper>
 const paperStela = {
     backgroundColor: '#cccccc', 
@@ -137,5 +148,5 @@ const columnsDataGrid = [
 
 
 // Declare the array to be exportable
-export { paperStyle, textboxStyle, columnsDataGrid, paperStela, paperData, dotStyle,
+export { paperStyle, paperStyleLP, textboxStyle, columnsDataGrid, paperStela, paperData, dotStyle,
     navStyle, bannerStyle, radioStyleDS, radioStyleTC, paperStyleInput, buttonStyle, calcButtonStyle };

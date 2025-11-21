@@ -100,7 +100,8 @@ export default function CalendarCore(props) {
                     <Paper sx={ paperStyle }>
                         <h1>Interactive Calendar Display</h1>
                         <p>Use the controls on the left to select an input method and then fill in the desired values<br></br> 
-                        Hover over a glyph to read a description when viewing this site on a laptop/desktop</p>
+                        Hover over a glyph to read a description when viewing this site on a laptop/desktop<br></br>
+                        For important background, see the various articles at <a href='https://www.mayan-calendar.com/ancient.html'>https://www.mayan-calendar.com/ancient.html</a></p>
                     </Paper>
                 </Grid>
 
