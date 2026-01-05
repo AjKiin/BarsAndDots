@@ -1,11 +1,8 @@
 // Import components and other support libraries
-import * as React from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
-import { Settings, Help, Info, Menu, ExpandLess, ExpandMore } from '@mui/icons-material';
-import { Grid, Drawer, List, ListItem, ListItemText, ListItemButton, Typography, IconButton, AppBar, Toolbar, Collapse } from '@mui/material';
-//import Box from '@mui/material/Box';
-//import { Link } from 'react-router-dom';
+import { Settings, Help, Info, Menu } from '@mui/icons-material';
+import { Grid, Drawer, List, ListItemText, ListItemButton, Typography, IconButton, AppBar, Toolbar } from '@mui/material';
 
 // Import the banner image to use on the nav bar
 import BannerImage from '../Images/Banner.png';
@@ -22,6 +19,7 @@ import MayaNumerology from     '../Pages/MayaNumerology/MayaNumerology';
 import SerpentNumbers from     '../Pages/SerpentNumbers/SerpentNumbers.js';
 import RingNumbers from        '../Pages/RingNumbers/RingNumbers.js';
 import DeepTime from           '../Pages/DeepTime/DeepTime.js';
+import LandingPage from        '../Pages/LandingPage/LandingPage.js'
 
 // Import the pop-up pages, or "top dots"
 import SettingsTab from        '../Pages/TopDots/Settings.js';
@@ -40,11 +38,6 @@ const listItemStyle = {
   color: '#cfcfcf', // Set the link text color
 }
 
-const dropdownStyle = {
-  fontSize:'17px',  // Font size for list items in the drawer
-  color: '#ebeb00', // Set the link text color
-}
-
 const subListItemStyle = {
   fontSize:'17px',    // Font size for list items in the drawer
   color: '#cfcfcf',   // Set the link text color
@@ -60,18 +53,16 @@ export default function Navigation(){
 
   // Create variables that control the main display and drawer
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [subListOpen, setSubListOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   let lcd = getLCDFromJDN(changeToJDN(new Date().getDate(), new Date().getMonth() + 1, new Date().getFullYear()), correlation)
   const [content, setContent] = useState( <CalendarCore correlation={correlation} names={names} lcd={lcd} /> );
-
+  
 
   return(
 
     <div>
-
 
       {/* This is the fixed bar on top that never moves, with banner, title, "top dots" and hamburger menu */}
       <AppBar style={{ position: 'static', background: '#042104' }} >
@@ -122,6 +113,10 @@ export default function Navigation(){
         <div>
           <List>
 
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <LandingPage /> ) }}>
+              <ListItemText primary="Landing Page" primaryTypographyProps={ listItemStyle }/>
+            </ListItemButton>
+
             <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <CalendarCore correlation={correlation} names={names} /> ) }}>
               <ListItemText primary="Interactive Calendar" primaryTypographyProps={ listItemStyle }/>
             </ListItemButton> 
@@ -150,33 +145,21 @@ export default function Navigation(){
               <ListItemText primary="Date Differences" primaryTypographyProps={ listItemStyle }/>
             </ListItemButton>
 
-            <ListItemButton onClick={() => setSubListOpen(!subListOpen)}>
-              <ListItemText primary="Advanced" primaryTypographyProps={ dropdownStyle } />
-              {subListOpen ? <ExpandLess sx={{ color: '#000000' }}/> : <ExpandMore sx={{ color: '#ebeb00' }}/>}
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <DayStations names={names}/> ) }} >
+              <ListItemText primary="819 Day Stations" primaryTypographyProps={ listItemStyle }/>
             </ListItemButton>
 
-            {/* This will be a dropdown within the drawer to show other, more advanced options */}
-            <Collapse in={subListOpen} timeout="auto" unmountOnExit>
-              <List>
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <SerpentNumbers correlation={correlation} names={names} /> ) }} >
+              <ListItemText primary="Serpent Numbers" primaryTypographyProps={ listItemStyle }/>
+            </ListItemButton>
 
-                <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <DayStations names={names}/> ) }} >
-                  <ListItemText primary="819 Day Stations" primaryTypographyProps={ subListItemStyle }/>
-                </ListItemButton>
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <RingNumbers correlation={correlation} names={names} /> ); }} >
+              <ListItemText primary="Ring Numbers" primaryTypographyProps={ listItemStyle }/>
+            </ListItemButton>
 
-                <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <SerpentNumbers correlation={correlation} names={names} /> ) }} >
-                  <ListItemText primary="Serpent Numbers" primaryTypographyProps={ subListItemStyle }/>
-                </ListItemButton>
-
-                <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <RingNumbers correlation={correlation} names={names} /> ); }} >
-                  <ListItemText primary="Ring Numbers" primaryTypographyProps={ subListItemStyle }/>
-                </ListItemButton>
-
-                <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <DeepTime names={names} /> ) }}>
-                  <ListItemText primary="Deep Time" primaryTypographyProps={ subListItemStyle }/>
-                </ListItemButton>
-
-              </List>
-            </Collapse>
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <DeepTime names={names} /> ) }}>
+              <ListItemText primary="Deep Time" primaryTypographyProps={ listItemStyle }/>
+            </ListItemButton>
 
           </List>
         </div>

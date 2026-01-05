@@ -1,7 +1,6 @@
 // This is a very simple javascript that loads the App into the page
 
 // Import components and support libraries
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 //import { createRoot } from 'react-dom/client';
