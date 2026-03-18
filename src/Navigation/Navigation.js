@@ -19,7 +19,6 @@ import MayaNumerology from     '../Pages/MayaNumerology/MayaNumerology';
 import SerpentNumbers from     '../Pages/SerpentNumbers/SerpentNumbers.js';
 import RingNumbers from        '../Pages/RingNumbers/RingNumbers.js';
 import DeepTime from           '../Pages/DeepTime/DeepTime.js';
-import LandingPage from        '../Pages/LandingPage/LandingPage.js'
 
 // Import the pop-up pages, or "top dots"
 import SettingsTab from        '../Pages/TopDots/Settings.js';
@@ -36,12 +35,6 @@ import { navStyle, bannerStyle, dotStyle } from '../Data/Components';
 const listItemStyle = {
   fontSize:'17px',  // Font size for list items in the drawer
   color: '#cfcfcf', // Set the link text color
-}
-
-const subListItemStyle = {
-  fontSize:'17px',    // Font size for list items in the drawer
-  color: '#cfcfcf',   // Set the link text color
-  textAlign: 'right', // Align right to set off the sub-list items
 }
 
 export default function Navigation(){
@@ -112,10 +105,6 @@ export default function Navigation(){
       >
         <div>
           <List>
-
-            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <LandingPage /> ) }}>
-              <ListItemText primary="Landing Page" primaryTypographyProps={ listItemStyle }/>
-            </ListItemButton>
 
             <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <CalendarCore correlation={correlation} names={names} /> ) }}>
               <ListItemText primary="Interactive Calendar" primaryTypographyProps={ listItemStyle }/>

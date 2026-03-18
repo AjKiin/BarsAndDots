@@ -1,5 +1,4 @@
 // Import all the components and packages that we'll need
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Dialog, DialogTitle, DialogActions, DialogContent } from '@mui/material';
 import Button from '@mui/material/Button';

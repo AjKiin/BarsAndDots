@@ -1,5 +1,4 @@
 // Import all the components and packages that we'll need
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@mui/material';
 
@@ -67,7 +66,6 @@ export default function CROutput(props) {
 }
 
 CROutput.propTypes = {
-    //correlation: PropTypes.number.isRequired,
     names: PropTypes.string.isRequired,
     tzolkinCoefficient: PropTypes.number.isRequired,
     tzolkinName: PropTypes.number.isRequired,

@@ -1,5 +1,4 @@
 // Import all the components and packages that we'll need
-import * as React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, InputLabel, MenuItem, Select } from '@mui/material';

@@ -1,5 +1,4 @@
 // Import all the components and packages that we'll need
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
 import { Grid } from '@mui/material';
