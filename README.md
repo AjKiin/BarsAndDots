@@ -1,8 +1,16 @@
-# Bars And Dots - Mayan Calendar and Date Calculator
+# React + Vite
 
-Welcome! This is the source code repo for the React Web App called "Bars And Dots" at www.barsanddots.com. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This is an online, web app version of the original Bars And Dots (Copyright 1989-1994, Rev 1.13) program written in MS-DOS by Sid Hollander. It uses a different format than the original program but preserves and expands on the functionality. It also uses Node.js / React / MUI framework and Webpack/Babel software. This site does not accept nor store user information. This site is also generally under construction as we add new features and frequently reassess accuracy. For best experience, view this site on a laptop / desktop; limited support for smartphones. 
+Currently, two official plugins are available:
 
-Questions and feedback can be sent to info@mayan-calendar.com
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
