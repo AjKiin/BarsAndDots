@@ -97,10 +97,22 @@ export default function CalendarCore(props) {
                 
                 <Grid size={{ md: 12 }}>
                     <Paper sx={ paperStyle }>
-                        <h1>Interactive Calendar Display</h1>
+                        <section className="calculator-introduction">
+                        <h1>Maya Calendric Calculator</h1>
+                        <p> Bars and Dots is an interactive Maya calendric calculator for exploring<br></br>
+                            the interconnected systems used to record and express dates in the ancient<br></br>
+                            Maya world. Enter a modern or Maya date to examine its relationship to the<br></br>
+                            Long Count, Tzolk'in, Haab', Calendar Round and other calendric cycles.<br></br>
+                        </p>
+                        <p> The calculator is designed as both a research tool and an educational<br></br>
+                            resource. Its detailed display allows students, researchers and anyone<br></br>
+                            interested in Maya chronology to explore how multiple calendric systems<br></br>
+                            combine to describe a single date.<br></br>
+                        </p>
                         <p>Use the controls on the left to select an input method and then fill in the desired values<br></br> 
                         Hover over a glyph to read a description when viewing this site on a laptop/desktop<br></br>
                         For important background, see the various articles at <a href='https://www.mayan-calendar.com/ancient.html'>https://www.mayan-calendar.com/ancient.html</a></p>
+                        </section>
                     </Paper>
                 </Grid>
 
@@ -383,6 +395,33 @@ export default function CalendarCore(props) {
                     </Paper>
                 </Grid>
                 
+                <Grid size={{ md: 12 }}>
+                    <Paper sx={ paperStyle }>
+
+                        <section className="calendar-explanation">
+                        <h2>Understanding the Maya Calendar Results</h2>
+                        <p> A Maya date can contain information from several overlapping systems<br></br>
+                            rather than a single calendar. Bars and Dots displays those relationships<br></br>
+                            together so that a date can be examined through Long Count notation,<br></br>
+                            ritual and solar calendar cycles, and additional calendric calculations.<br></br>
+                        </p>
+                        </section>
+
+                        <section className="mec-network">
+                        <h2>Explore More from the Maya Exploration Center</h2>
+                        <p> Bars and Dots is part of a collection of Maya research, education and<br></br>
+                            exploration resources associated with the Maya Exploration Center.<br></br>
+                        </p>
+                            <a href="https://www.mayaexploration.org/">Maya Exploration Center</a><br></br>
+                            <a href="https://www.mayan-calendar.com/">Mayan Calendar</a><br></br>
+                            <a href="https://www.archaeoed.com/">ArchaeoEd Podcast</a><br></br>
+                            <a href="https://www.ancientexploration.com/">Ancient Explorations</a>
+                        </section>
+
+                    </Paper>
+                </Grid>
+
+
             </Grid>
 
         </div>
