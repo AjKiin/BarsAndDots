@@ -8,6 +8,7 @@ import { Grid, Drawer, List, ListItemText, ListItemButton, Typography, IconButto
 import BannerImage from '../Images/Banner.png';
 
 // Import the various pages that we will navigate to
+import LandingPage from        '../Pages/LandingPage/LandingPage';
 import DateDiffs from          '../Pages/DateDiffs/DateDiffs';
 import CalendarCore from       '../Pages/CalendarDisplay/CalendarCore';
 import DataLines from          '../Pages/DataLines/DataLines';
@@ -50,8 +51,9 @@ export default function Navigation(){
   const [helpOpen, setHelpOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   let lcd = getLCDFromJDN(changeToJDN(new Date().getDate(), new Date().getMonth() + 1, new Date().getFullYear()), correlation)
-  const [content, setContent] = useState( <CalendarCore correlation={correlation} names={names} lcd={lcd} /> );
-  
+  //const [content, setContent] = useState( <CalendarCore correlation={correlation} names={names} lcd={lcd} /> );
+  const [content, setContent] = useState( <LandingPage correlation={correlation} names={names} lcd={lcd} /> );
+
   const handleClose = (event, reason) => {
     // If the user clicked outside the drawer, close it
     if (reason === 'backdropClick') {
@@ -103,6 +105,10 @@ export default function Navigation(){
       >
         <div>
           <List>
+
+            <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <LandingPage correlation={correlation} names={names} /> ) }}>
+              <ListItemText primary="Home" slotProps={{ primary: listItemStyle }} />
+            </ListItemButton>
 
             <ListItemButton onClick={() => { setDrawerOpen(false); setContent( <CalendarCore correlation={correlation} names={names} /> ) }}>
               <ListItemText primary="Interactive Calendar" slotProps={{ primary: listItemStyle }} />
