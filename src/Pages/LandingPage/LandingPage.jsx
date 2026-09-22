@@ -28,6 +28,7 @@ const paperStyle = {
 
 export default function LandingPage() {
 
+
     /*
     let lcd = 10123890;
     let names = 'yucatecan';
@@ -48,7 +49,9 @@ export default function LandingPage() {
     let diffLC = getLCValues(lcd - station);
     */
 
+
     return(
+        
         <div>
             <Grid container>
                 <Grid size={{ xs: 12 }}>
@@ -59,8 +62,8 @@ export default function LandingPage() {
                         <Grid size={{ xs: 12 }}>
 
                             <section className="welcome">
-                                <h2 style={{color: "white"}}>Welcome to the Ancient Mayan Calendar</h2>
-                                <p style={{color: "white"}}>Bars & Dots Online, based on the DOS program <i>BarsDots Pro</i>, (c) 1989-1994, by Sid Hollander<br></br>
+                                <h2 style={{color: "white"}}>Welcome to Ancient Mayan Calendrics</h2>
+                                <p style={{color: "white"}}>Bars & Dots online, based on the DOS program <i>BarsDots Pro</i>, (c) 1989-1994, by Sid Hollander<br></br>
                                 For best experience, view this site on a laptop / desktop; limited support for smartphones<br></br>
                                 Questions and feedback can be sent to
                                 <b style={{color: "yellow"}}> info@mayan-calendar.com</b><br></br>
@@ -76,7 +79,7 @@ export default function LandingPage() {
                             </section>
 
                             <section className="calculator-introduction">
-                                <h2 style={{color: "white"}}>Understanding the Maya Calendar Results</h2>
+                                <h2 style={{color: "white"}}>Understanding the Maya Calendar</h2>
                                 <p style={{color: "white"}}> Bars and Dots is an interactive Maya calendric calculator for exploring<br></br>
                                 the interconnected systems used to record and express dates in the ancient<br></br>
                                 Maya world. Enter a modern or Maya date to examine its relationship to the<br></br>
